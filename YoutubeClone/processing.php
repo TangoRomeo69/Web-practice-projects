@@ -1,8 +1,13 @@
+<!--Video processing page-->
+
 <?php
+//call basic page structure
 require_once("includes/header.php");
+//call the uploaded video data information class
 require_once("includes/classes/VideoUploadData.php");
+//call the video data processor class
 require_once("includes/classes/VideoProcessor.php");
-//check if came from the upload page.
+//check if the age was reached from upload page
 if(!isset($_POST["uploadButton"])){
   echo "no file sent to page";
   exit();

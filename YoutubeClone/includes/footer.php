@@ -1,3 +1,5 @@
+<!--Basic footer structure-->
+
 </div>
 </div>
 </div>
