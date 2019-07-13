@@ -41,8 +41,16 @@ class  VideoProcessor{
     //create unique and temporary filepath
     $tempFilePath = $targetDir . uniqid() . basename($videoData["name"]);
     $tempFilePath = str_replace(" ", "_", $tempFilePath);
-
+    //holds temporary boolean value of validity
     $isValidData = $this->processData($videoData, $tempFilePath);
+    //if not valid
+    if(!$isValidData){
+      return false;
+    }
+    //move to temp location if valid
+    if(move_uploaded_file($videoData["tmp_name"], $tempFilePath)){
+      echo "Fie moved successfully";
+    }
 
   }
 
@@ -63,6 +71,11 @@ class  VideoProcessor{
       echo "Invalid file type";
       return false;
     }
+    else if($this->hasError($videoData)){
+      echo "Error code: " . $videoData["error"];
+      return false;
+    }
+    return true;
   }
 
   /**
@@ -82,6 +95,15 @@ class  VideoProcessor{
   private function isValidType($type){
     $lowerCased = strtolower($type);
     return in_array($lowerCased, $this->allowedTypes);
+  }
+
+  /**
+   * @param $data
+   * checks if there are any other errors
+   * @return bool
+   */
+  private function hasError($data){
+    return $data["error"] != 0;
   }
 }
 ?>

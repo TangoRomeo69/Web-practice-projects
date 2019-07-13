@@ -25,7 +25,7 @@ require_once("includes/config.php");
     <!--Side navigation bar show/hide button-->
     <button class="navShowHide"><img src="assets/images/icons/menu.png" alt="Menu"></button>
     <!--Site Logo-->
-    <a class="logoContainer" href="index.php"><img src="assets/images/icons/VideoTubeLogo.png" alt="Logo"></a>
+    <a class="logoContainer" href="index.php"><img src="assets/images/icons/TestTubeLogo.png" alt="Logo"></a>
     <!--SearchBar-->
     <div class="searchBarContainer">
       <form action="search.php" method="GET">

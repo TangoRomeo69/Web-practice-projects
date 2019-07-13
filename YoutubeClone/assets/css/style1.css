@@ -3,6 +3,7 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
+  color: lightgrey;
 }
 
 a:hover{
@@ -12,7 +13,7 @@ a:hover{
 #pageContainer{
   width: 100%;
   height: 100%;
-  background-color: #fafafa;
+  background-color: #01070C;
 }
 
 #mastHeadContainer{
@@ -23,7 +24,7 @@ a:hover{
   top: 0;
   left: 0;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: #010B14;
   border-bottom: 1px solid #e8e8e8;
   z-index: 1;
   display: flex;
@@ -54,8 +55,8 @@ a:hover{
 }
 
 #mastHeadContainer .logoContainer img{
-  height: 25px;
-  margin-left: 8px;
+  height: 60px;
+  /*margin-left: 4px;*/
 }
 
 #sideNavContainer{
@@ -63,7 +64,7 @@ a:hover{
   top: 0;
   position: fixed;
   width: 240px;
-  background-color: #f5f5f5;
+  background-color: #02101C;
   padding-top: 56px;
   display: flex;
   flex-direction: column;
